@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="ja" data-theme="light" style=""><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Geodesic Forum 2026 来日スタートアップ企業紹介 - ABC順企業リスト</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Noto Sans JP', sans-serif;
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 32px 80px;
+        background-color: #ffffff;
+        color: #333333;
+        line-height: 1.6;
+        position: relative;
+        box-sizing: border-box;
+      }
+
+      h1 {
+        font-size: 24pt;
+        border-bottom: 2px solid #000;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+        color: #000;
+      }
+
+      h2 {
+        font-size: 16pt;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 5px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        color: #2c3e50;
+      }
+
+      h3 {
+        font-size: 14pt;
+        margin-top: 0;
+        margin-bottom: 10px;
+        color: #444;
+        font-weight: bold;
+      }
+
+      .header-info {
+        text-align: right;
+        font-size: 11pt;
+        color: #666;
+        margin-bottom: 40px;
+      }
+
+      .executive-summary {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin-bottom: 30px;
+      }
+
+      .stats-box {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+        padding: 15px 0;
+        margin: 20px 0;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-value {
+        font-size: 18pt;
+        font-weight: bold;
+        color: #2980b9;
+      }
+
+      .company-card {
+        border-left: 4px solid #ddd;
+        padding: 20px;
+        margin-bottom: 30px;
+        background-color: #fff;
+        border-radius: 2px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+      }
+
+      .priority-high {
+        border-left-color: #e74c3c;
+      }
+      .priority-med {
+        border-left-color: #f39c12;
+      }
+
+      .company-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        margin-bottom: 10px;
+        border-bottom: 1px solid #eee;
+        padding-bottom: 10px;
+      }
+
+      .company-name {
+        font-size: 16pt;
+        font-weight: bold;
+        color: #2c3e50;
+      }
+
+      .founding-year {
+        font-size: 11pt;
+        color: #7f8c8d;
+      }
+
+      .priority-badge {
+        font-size: 11pt;
+        font-weight: bold;
+        margin-bottom: 10px;
+        display: block;
+      }
+
+      .priority-5 {
+        color: #e74c3c;
+      }
+      .priority-4 {
+        color: #e67e22;
+      }
+
+      .section-label {
+        font-weight: bold;
+        color: #555;
+        font-size: 10.5pt;
+      }
+
+      .content-row {
+        margin-bottom: 8px;
+        font-size: 10.5pt;
+      }
+
+      .meta-info {
+        font-size: 9.5pt;
+        color: #666;
+        background-color: #f9f9f9;
+        padding: 10px;
+        margin-top: 15px;
+        border-radius: 4px;
+      }
+
+      .meta-row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 4px;
+      }
+
+      .url-link {
+        color: #2980b9;
+        text-decoration: none;
+      }
+
+      .url-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Index Section Styles */
+      .index-section {
+        background-color: #f8f9fa;
+        border: 2px solid #ddd;
+        padding: 25px;
+        margin-bottom: 40px;
+        border-radius: 4px;
+      }
+
+      .index-section h2 {
+        margin-top: 0;
+        color: #2c3e50;
+        font-size: 18pt;
+        border-bottom: 2px solid #3498db;
+        padding-bottom: 10px;
+      }
+
+      .index-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        margin-top: 20px;
+      }
+
+      .index-item {
+        background-color: #ffffff;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+      }
+
+      .index-item:hover {
+        border-color: #3498db;
+        box-shadow: 0 2px 8px rgba(52, 152, 219, 0.15);
+        transform: translateY(-1px);
+      }
+
+      .index-link {
+        display: flex;
+        align-items: center;
+        padding: 12px 15px;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .index-number {
+        font-weight: bold;
+        color: #3498db;
+        min-width: 30px;
+        font-size: 11pt;
+      }
+
+      .index-company {
+        font-weight: bold;
+        color: #2c3e50;
+        flex: 1;
+        font-size: 11pt;
+      }
+
+      .index-category {
+        font-size: 9.5pt;
+        color: #7f8c8d;
+        font-style: italic;
+      }
+
+      @media print {
+        .index-section {
+          page-break-after: always;
+        }
+      }
+    </style>
+  </head>
+  <body style="font-size: 16px;">
+    <!-- Vercel Deployment Notice -->
+    <div style="background-color: #000; color: #fff; text-align: center; padding: 8px 0; font-size: 11pt; margin-bottom: 20px;">
+      このファイルは Vercel上で動いています
+    </div>
+    
+    <h1>
+      <span style="font-size: 28px;">Geodesic Forum 2026 来日スタートアップ企業紹介　　</span>
+      <span style="font-size: 16pt; font-weight: normal">ABC順企業リスト</span>
+    </h1>
+
+    <div class="header-info">
+      <p style="line-height: 1.8;">
+        作成日: 2026年1月13日<br>
+        作成者: Geodesic Japan Team<br>
+        <span style="font-size: 9pt;">Taka Otsuka - Director Biz. Dev.</span>
+      </p>
+    </div>
+
+    <div class="executive-summary">
+      <h3>エグゼクティブサマリー</h3>
+      <p>
+        本資料は、Geodesic Forum 2026に来日する北米スタートアップ企業16社をアルファベット順に整理したリストです。「生成AIの実装」「ハードウェア/ロボティクス自動化」「セキュリティ強化」の3点において、日本企業の課題解決に直結する技術を持つ企業が選定されています。
+      </p>
+
+      <div class="stats-box">
+        <div class="stat-item">
+          <div class="stat-value">16社</div>
+          <div>来日企業数</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">$9.3B</div>
+          <div>最大評価額 (Vercel)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value">GenAI / Robotics</div>
+          <div>主要トレンド</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Index / Table of Contents -->
+    <div class="index-section">
+      <h2>Index - 企業一覧</h2>
+      <div class="index-grid">
+        <div class="index-item">
+          <a href="#arena" class="index-link">
+            <span class="index-number">1.</span>
+            <span class="index-company">Arena</span>
+            <span class="index-category">ハードウェアテスト</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#cartesia" class="index-link">
+            <span class="index-number">2.</span>
+            <span class="index-company">Cartesia</span>
+            <span class="index-category">AI音声</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#clickhouse" class="index-link">
+            <span class="index-number">3.</span>
+            <span class="index-company">ClickHouse</span>
+            <span class="index-category">データベース</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#distyl" class="index-link">
+            <span class="index-number">4.</span>
+            <span class="index-company">Distyl</span>
+            <span class="index-category">AI変革コンサル</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#exein" class="index-link">
+            <span class="index-number">5.</span>
+            <span class="index-company">EXEIN</span>
+            <span class="index-category">IoTセキュリティ</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#harness" class="index-link">
+            <span class="index-number">6.</span>
+            <span class="index-company">Harness</span>
+            <span class="index-category">DevOps/CI/CD</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#island" class="index-link">
+            <span class="index-number">7.</span>
+            <span class="index-company">Island</span>
+            <span class="index-category">セキュアブラウザ</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#modular" class="index-link">
+            <span class="index-number">8.</span>
+            <span class="index-company">Modular</span>
+            <span class="index-category">AI開発基盤</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#netradyne" class="index-link">
+            <span class="index-number">9.</span>
+            <span class="index-company">Netradyne</span>
+            <span class="index-category">フリート安全</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#parallel" class="index-link">
+            <span class="index-number">10.</span>
+            <span class="index-company">Parallel</span>
+            <span class="index-category">AI向けWeb API</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#roboflow" class="index-link">
+            <span class="index-number">11.</span>
+            <span class="index-company">Roboflow</span>
+            <span class="index-category">コンピュータビジョン</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#smack" class="index-link">
+            <span class="index-number">12.</span>
+            <span class="index-company">SMACK Technology</span>
+            <span class="index-category">国防AI</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#tinyfish" class="index-link">
+            <span class="index-number">13.</span>
+            <span class="index-company">TinyFish</span>
+            <span class="index-category">Web自動化</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#trobotics" class="index-link">
+            <span class="index-number">14.</span>
+            <span class="index-company">T-Robotics</span>
+            <span class="index-category">産業ロボットAI</span>
+          </a>
+        </div>
+        <div class="index-item">
+          <a href="#vercel" class="index-link">
+            <span class="index-number">15.</span>
+            <span class="index-company">Vercel</span>
+            <span class="index-category">フロントエンド開発</span>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Company List A-Z -->
+
+    <!-- A -->
+    <div class="company-card priority-high" id="arena">
+      <div class="company-header">
+        <span class="company-name">Arena</span>
+        <span class="founding-year">(2020年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Pratap Ranade (Co-Founder) | 元Palantir、ハードウェア開発の民主化を目指す
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span>
+        AI搭載のハードウェアテストロボット。半導体・GPU開発のテスト工程を自動化。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        テスト工程を35%効率化し、市場投入時間を65%短縮。人手不足が深刻な検証工程を「デジタルテストエンジニア」が代替。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span>
+        半導体メーカー(ソニー、ルネサス)、電機メーカー、自動車部品。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        新型チップの性能検証、歩留まり向上のためのデータ解析、マルチモーダルデータを用いた設計フィードバック。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: AMD
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series B, $30M/46.5億円 (April 2025), 評価額 $334M/517.7億円</span>
+          <span><a href="https://arena-ai.com" class="url-link">arena-ai.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- C -->
+    <div class="company-card priority-high" id="cartesia">
+      <div class="company-header">
+        <span class="company-name">Cartesia</span>
+        <span class="founding-year">(2023年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Karan Goel, PhD (Co-Founder) | Stanford AI Lab、State Space Models共同発明者
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> 感情を込めて話すリアルタイムAI音声「Sonic」。90msの超低遅延を実現。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        笑い声や感情表現を含む自然な音声を生成し、人間らしい対話体験を提供。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> コールセンター、ゲーム開発、アニメ・エンタメ、カーナビ。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        リアルタイム音声エージェント、ゲーム内NPCの対話生成、オーディオブック作成。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: AWS、Google、NVIDIA (パートナー)
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series A, $64M/99.2億円 (March 2025)</span>
+          <span><a href="https://cartesia.ai" class="url-link">cartesia.ai</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="company-card priority-high" id="clickhouse">
+      <div class="company-header">
+        <span class="company-name">ClickHouse</span>
+        <span class="founding-year">(2021年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Aaron Katz (Co-Founder) | 元Yandex、ClickHouse開発チーム出身
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span>
+        ビッグデータ分析の超高速エンジン。リアルタイム分析に特化したカラム型DB。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        膨大なデータの高速クエリ処理により、意思決定のリアルタイム化を実現。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 通信キャリア、Eコマース、金融機関、広告テック。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span> ログ解析、ユーザー行動分析、不正検知、通信トラフィック監視。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: <a href="https://clickhouse.com/blog/clickhouse-powers-netflixs-advertising-infrastructure" class="url-link">Netflix</a>、<a href="https://blog.cloudflare.com/http-analytics-for-6m-requests-per-second-using-clickhouse" class="url-link">Cloudflare</a>、<a href="https://clickhouse.com/blog/evolution-of-data-structures-in-yandex-metrica" class="url-link">Uber</a>
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series C, $350M/542.5億円 (May 2025), 評価額 $6B/9,300億円</span>
+          <span><a href="https://clickhouse.com" class="url-link">clickhouse.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- D -->
+    <div class="company-card priority-med" id="distyl">
+      <div class="company-header">
+        <span class="company-name">Distyl</span>
+        <span class="founding-year">(2023年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Brynjar Gretarsson (Co-Founder) | 元Palantir創業メンバー、Fortune 500のAI実装エキスパート
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> Fortune 500向けAI実装変革コンサルティング。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span> 元Palantirチームが、既存業務プロセスへのAI統合を数週間で実現。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 通信、金融、製造、商社、エネルギー。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        業務プロセスのAIネイティブ化、複雑な承認フローの自動化、企業固有データの活用。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: <a href="https://www.t-mobile.com" class="url-link">T-Mobile</a>、Fortune 500企業25社以上
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series B, $175M/271.25億円 (September 2025), 評価額 $1.8B/2,790億円</span>
+          <span><a href="https://distyl.ai" class="url-link">distyl.ai</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- E -->
+    <div class="company-card priority-high" id="exein">
+      <div class="company-header">
+        <span class="company-name">EXEIN</span>
+        <span class="founding-year">(2018年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Gianni Cuozzo (Co-Founder) | セキュリティエキスパート、IoT/組み込みシステム保護のパイオニア
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> IoTデバイスの「免疫システム」。組み込みセキュリティ。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        デバイスレベルでのリアルタイム脅威検知により、外部・内部攻撃を防御。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 自動車、半導体、産業機械、重要インフラ(電力・鉄道)。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        コネクテッドカーのサイバー防御、スマートメーター保護、工場の制御機器セキュリティ。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: MediaTek (パートナー)、Supermicro (パートナー)、15億台以上のデバイスを保護
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series C, €70M/約119億円 (July 2025), 評価額 €350M+/約595億円</span>
+          <span><a href="https://www.exein.io" class="url-link">exein.io</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- H -->
+    <div class="company-card priority-high" id="harness">
+      <div class="company-header">
+        <span class="company-name">Harness</span>
+        <span class="founding-year">(2017年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Jyoti Bansal (Founder) | AppDynamics創業者($3.7B買収)、DevOps界の先駆者
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> ソフトウェアデプロイの自動操縦システム。AI駆動CI/CD。Traceable社を買収しAPIセキュリティを強化。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        コードから本番環境へのデリバリーを完全自動化し、開発効率と安全性を向上。Traceable統合によりAPIセキュリティとランタイム保護を強化。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> IT企業、SIer、金融、Webサービス、DevOps導入企業。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        大規模システムのデプロイ自動化、クラウドコストの最適化、セキュリティ統合、API攻撃の検知・防御(Traceable)。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: <a href="https://www.harness.io/customers/cvs-health" class="url-link">CVS Health</a>、Wells Fargo、<a href="https://www.harness.io/customers/priceline" class="url-link">Priceline</a>
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series D, $230M/356.5億円 (April 2022), 評価額 $3.7B/5,735億円</span>
+          <span><a href="https://harness.io" class="url-link">harness.io</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- I -->
+    <div class="company-card priority-high" id="island">
+      <div class="company-header">
+        <span class="company-name">Island</span>
+        <span class="founding-year">(2020年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Mike Fey (Co-Founder) | 元Symantec/BlueCoat CEO、エンタープライズセキュリティのベテラン
+      </div>
+      <div class="content-row"><span class="section-label">概要:</span> セキュリティ機能搭載の企業専用ブラウザ。</div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        コピペや印刷の制御、画面キャプチャ防止により、情報漏洩リスクを劇的に低減。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 金融機関、ヘルスケア、政府・自治体、製薬企業。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        コールセンターの在宅化、BYOD端末での安全な業務アクセス、機密データの保護。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: 米国トップ10銀行のうち8行、Pfizer、Swiss Life (450社以上が導入済み)
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series E, $250M/387.5億円 (March 2025), 評価額 $4.8B/7,440億円</span>
+          <span><a href="https://island.io" class="url-link">island.io</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- M -->
+    <div class="company-card priority-high" id="modular">
+      <div class="company-header">
+        <span class="company-name">Modular</span>
+        <span class="founding-year">(2022年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Chris Lattner (Co-Founder) | LLVM/Clang/Swift/MLIR開発者、元Apple/Tesla/Google、コンパイラ界のレジェンド
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> AI開発を高速化する言語「Mojo」とプラットフォーム「MAX」。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        Pythonの使いやすさとC++の速度を両立し、AI推論コストを80%削減。NVIDIAロックインを解消。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 自動車メーカー、AI研究開発、半導体、エッジAI開発。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        エッジデバイスでのAI推論高速化、大規模LLMサービスの運用コスト削減。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        パートナー: NVIDIA、AMD、Microsoft
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series C, $250M/387.5億円 (September 2025), 評価額 $1.6B/2,480億円</span>
+          <span><a href="https://modular.com" class="url-link">modular.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- N -->
+    <div class="company-card priority-high" id="netradyne">
+      <div class="company-header">
+        <span class="company-name">Netradyne</span>
+        <span class="founding-year">(2015年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Sandeep Pandya (Co-Founder) | Qualcomm出身、コンピュータビジョン専門家、フリート安全AI分野のパイオニア
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> AIフリート安全コーチ。トラック運転中の行動をAIカメラで分析。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        リアルタイムの音声コーチングで事故を50%削減し、「褒める」指導でドライバー定着を支援。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 物流・運送、タクシー、建設機械、食品配送。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        配送トラックの安全管理、危険運転の即時是正、優良ドライバーの表彰制度。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: <a href="https://www.netradyne.com/resources/case-studies/amazon-netradyne-case-study" class="url-link">Amazon</a>、Shell、Knight-Swift Transportation (3,000社以上、45万台以上の車両)
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series D, $90M/139.5億円 (January 2025), 評価額 $1.35B/2,092.5億円</span>
+          <span><a href="https://www.netradyne.com" class="url-link">netradyne.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- P -->
+    <div class="company-card priority-med" id="parallel">
+      <div class="company-header">
+        <span class="company-name">Parallel</span>
+        <span class="founding-year">(2019年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Ev Williams (Founder) | 元Twitter CEO、Blogger/Medium創業者、シリアルアントレプレナー
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> 超高性能な図書館司書。AIエージェント向けウェブインフラ。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        AIエージェントに正確なウェブ検索・情報抽出能力を提供し、ハルシネーションを低減。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> AIスタートアップ、コンサル、金融調査、マーケティング。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        特定トピックの深掘り調査、信頼できる情報ソースに基づいたレポート生成。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        パートナー: AWS、Vercel、Zapier (元Twitter CEO Jack Dorsey創業)
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series A, $100M/155億円 (November 2025), 評価額 $740M/1,147億円</span>
+          <span><a href="https://parallel.ai" class="url-link">parallel.ai</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="company-card priority-med" id="roboflow">
+      <div class="company-header">
+        <span class="company-name">Roboflow</span>
+        <span class="founding-year">(2019年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Joseph Nelson (Co-Founder) | コンピュータビジョンの民主化を推進、100万人以上の開発者コミュニティ構築
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> コンピュータビジョンの民主化プラットフォーム。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        画像認識AIのデータ作成からデプロイまでを高速化・内製化し、現場の課題を解決。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 製造業(トヨタ、ソニー、パナソニック)、小売(セブン-イレブン、ローソン、イオン)、物流(ヤマト運輸、日本郵便、佐川急便)、農業テック企業、医療機器メーカー(オリンパス、テルモ)、セキュリティ企業。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span> 工場の外観検査自動化、店舗の商品棚管理、安全監視システム。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        海外導入企業: Fortune 500製造企業、100万人以上のエンジニアが利用 (パートナー: NVIDIA、Intel、AWS)<br>
+        日本パートナー: <a href="https://www.systems.nakashima.co.jp/rf/roboflow/" class="url-link">株式会社システムズナカシマ</a> (オフィシャルパートナー)<br>
+        日本導入事例: <a href="https://www.systems.nakashima.co.jp/rf/roboflow/case/01/index.html" class="url-link">川本鋼材株式会社</a> - 鋼材出荷本数の自動カウントシステム導入により誤出荷削減
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series A, $20M/31億円 (September 2021)</span>
+          <span><a href="https://roboflow.com" class="url-link">roboflow.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- S -->
+    <div class="company-card priority-med" id="smack">
+      <div class="company-header">
+        <span class="company-name">SMACK Technology</span>
+        <span class="founding-year">(2024年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> 情報非公開 | 米国防総省(DoD)向けAI開発、Palantir/Scale AIとパートナーシップ
+      </div>
+      <div class="content-row"><span class="section-label">概要:</span> 国防総省向けAI意思決定プラットフォーム。</div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span> 強化学習を活用し、複雑な環境下での「意思決定優位性」を実現。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 防衛、重工、重要インフラ、危機管理コンサル。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        防衛装備品の運用シミュレーション、危機対応計画の最適化、サプライチェーンリスク管理。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: 米国防総省(DoD)、Marine Corps Warfighting Lab (パートナー: Palantir、Scale AI)
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Undisclosed</span>
+          <span><a href="https://www.smacktechnologies.com" class="url-link">smacktechnologies.com</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- T -->
+    <div class="company-card priority-high" id="tinyfish">
+      <div class="company-header">
+        <span class="company-name">TinyFish</span>
+        <span class="founding-year">(2023年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Sudheesh Nair (Co-Founder) | 元ThoughtSpot CEO、元Nutanix President、エンタープライズソフトウェア界のベテラン
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> ロボット秘書。Web全体を操作する自律エージェント基盤。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        人間のようにウェブサイトを巡回し、複雑なワークフロー(価格調査、予約等)を完全自動化。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 旅行代理店、Eコマース、不動産、人材、市場調査。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        競合他社の価格自動監視、在庫チェック、フォーム入力代行、予約管理。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: <a href="https://blog.google/products/travel/google-hotels-tinyfish-partnership/" class="url-link">Google (Google Hotels)</a>、<a href="https://www.doordash.com" class="url-link">DoorDash</a>、ClassPass (パートナー: Google)
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series A, $47M/72.85億円 (August 2025)</span>
+          <span><a href="https://tinyfish.ai" class="url-link">tinyfish.ai</a></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="company-card priority-high" id="trobotics">
+      <div class="company-header">
+        <span class="company-name">T-Robotics</span>
+        <span class="founding-year">(2024年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Tal Wiesner (Co-Founder) | ABB AI Startup Challenge受賞、産業ロボットプログラミング革命を牽引
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span> 産業用ロボットの「プログラミング革命」。対話型AI指示。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span>
+        自然言語でロボットを操作し、ティーチング時間を数週間から数時間へ短縮。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> 製造業、精密機器メーカー、産業機械、金属加工。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        多品種少量生産ラインの自動化、溶接・組立・検査工程の迅速な立ち上げ。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        パートナー: <a href="https://new.abb.com/news/detail/105977/abb-selects-t-robotics-as-ai-startup-challenge-winner" class="url-link">ABB Robotics (AI Startup Challenge受賞)</a>、Fluidotronica
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Seed, $5.4M/8.37億円 (December 2024)</span>
+          <span><a href="https://www.t-robotics.ai" class="url-link">t-robotics.ai</a></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- V -->
+    <div class="company-card priority-high" id="vercel">
+      <div class="company-header">
+        <span class="company-name">Vercel</span>
+        <span class="founding-year">(2015年設立)</span>
+      </div>
+      <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
+        <strong>CEO:</strong> Guillermo Rauch (Founder) | Next.js/Socket.io/Mongoose.js開発者、アルゼンチン出身の独学エンジニア
+      </div>
+      <div class="content-row">
+        <span class="section-label">概要:</span>
+        フロントエンド開発者の超高速デプロイ基地。Next.js開発チームによるクラウド。
+      </div>
+      <div class="content-row">
+        <span class="section-label">価値提案:</span> Web開発速度を最大化し、グローバルエッジでの高速配信とAI統合を支援。
+      </div>
+      <div class="content-row">
+        <span class="section-label">日本での適合業種:</span> Web開発、Eコマース、メディア、SaaS、ゲーム。
+      </div>
+      <div class="content-row">
+        <span class="section-label">ユースケース:</span>
+        高速なキャンペーンサイト構築、AIアプリケーションのフロントエンド、ECサイト。
+      </div>
+      <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
+        導入企業: <a href="https://openai.com" class="url-link">OpenAI</a>、<a href="https://www.nintendo.com" class="url-link">Nintendo</a>、<a href="https://www.underarmour.com" class="url-link">Under Armour</a>
+      </div>
+      <div class="meta-info">
+        <div class="meta-row">
+          <span><strong>資金調達:</strong> Series F, $300M/465億円 (September 2025), 評価額 $9.3B/1兆4,415億円</span>
+          <span><a href="https://vercel.com" class="url-link">vercel.com</a></span>
+        </div>
+      </div>
+    </div>
+  
+
+</body></html>

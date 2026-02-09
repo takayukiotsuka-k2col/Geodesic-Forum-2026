@@ -108,10 +108,37 @@
       .company-header {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-start;
         margin-bottom: 10px;
         border-bottom: 1px solid #eee;
         padding-bottom: 10px;
+        padding-top: 5px;
+        position: relative;
+      }
+
+      .company-header-left {
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+        flex: 1;
+      }
+
+      .back-to-index {
+        font-size: 10pt;
+        color: #3498db;
+        text-decoration: none;
+        padding: 5px 10px;
+        border: 1px solid #3498db;
+        border-radius: 4px;
+        transition: all 0.2s ease;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      .back-to-index:hover {
+        background-color: #3498db;
+        color: #fff;
+        text-decoration: none;
       }
 
       .company-name {
@@ -325,9 +352,25 @@
         }
 
         .company-header {
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 10px;
+          padding-bottom: 10px;
+        }
+
+        .company-header-left {
           flex-direction: column;
           align-items: flex-start;
-          gap: 5px;
+          gap: 2px;
+          flex: 1 1 100%;
+        }
+
+        .back-to-index {
+          font-size: 9pt;
+          padding: 4px 8px;
+          flex: 0 0 auto;
+          margin-top: 5px;
         }
 
         .company-name {
@@ -476,7 +519,7 @@
     </div>
 
     <!-- Index / Table of Contents -->
-    <div class="index-section">
+    <div class="index-section" id="index">
       <h2>Index - 企業一覧</h2>
       <div class="index-grid">
         <div class="index-item">
@@ -592,8 +635,11 @@
     <!-- A -->
     <div class="company-card priority-high" id="arena">
       <div class="company-header">
-        <span class="company-name">Arena</span>
-        <span class="founding-year">(2020年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Arena</span>
+          <span class="founding-year">(2020年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Pratap Ranade (Co-Founder) | 元Palantir、ハードウェア開発の民主化を目指す
@@ -615,7 +661,7 @@
         新型チップの性能検証、歩留まり向上のためのデータ解析、マルチモーダルデータを用いた設計フィードバック。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: AMD
+        導入企業: <a href="https://www.amd.com" class="url-link">AMD</a>
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -628,8 +674,11 @@
     <!-- C -->
     <div class="company-card priority-high" id="cartesia">
       <div class="company-header">
-        <span class="company-name">Cartesia</span>
-        <span class="founding-year">(2023年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Cartesia</span>
+          <span class="founding-year">(2023年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Karan Goel, PhD (Co-Founder) | Stanford AI Lab、State Space Models共同発明者
@@ -649,7 +698,7 @@
         リアルタイム音声エージェント、ゲーム内NPCの対話生成、オーディオブック作成。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: AWS、Google、NVIDIA (パートナー)
+        導入企業: <a href="https://aws.amazon.com" class="url-link">AWS</a>、<a href="https://www.google.com" class="url-link">Google</a>、<a href="https://www.nvidia.com" class="url-link">NVIDIA</a> (パートナー)
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -661,8 +710,11 @@
 
     <div class="company-card priority-high" id="clickhouse">
       <div class="company-header">
-        <span class="company-name">ClickHouse</span>
-        <span class="founding-year">(2021年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">ClickHouse</span>
+          <span class="founding-year">(2021年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Aaron Katz (Co-Founder) | 元Yandex、ClickHouse開発チーム出身
@@ -682,7 +734,7 @@
         <span class="section-label">ユースケース:</span> ログ解析、ユーザー行動分析、不正検知、通信トラフィック監視。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: <a href="https://clickhouse.com/blog/clickhouse-powers-netflixs-advertising-infrastructure" class="url-link">Netflix</a>、<a href="https://blog.cloudflare.com/http-analytics-for-6m-requests-per-second-using-clickhouse" class="url-link">Cloudflare</a>、<a href="https://clickhouse.com/blog/evolution-of-data-structures-in-yandex-metrica" class="url-link">Uber</a>
+        導入企業: <a href="https://www.netflix.com" class="url-link">Netflix</a>、<a href="https://www.cloudflare.com" class="url-link">Cloudflare</a>、<a href="https://www.uber.com" class="url-link">Uber</a>
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -695,8 +747,11 @@
     <!-- D -->
     <div class="company-card priority-med" id="distyl">
       <div class="company-header">
-        <span class="company-name">Distyl</span>
-        <span class="founding-year">(2023年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Distyl</span>
+          <span class="founding-year">(2023年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Brynjar Gretarsson (Co-Founder) | 元Palantir創業メンバー、Fortune 500のAI実装エキスパート
@@ -728,8 +783,11 @@
     <!-- E -->
     <div class="company-card priority-high" id="exein">
       <div class="company-header">
-        <span class="company-name">EXEIN</span>
-        <span class="founding-year">(2018年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">EXEIN</span>
+          <span class="founding-year">(2018年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Gianni Cuozzo (Co-Founder) | セキュリティエキスパート、IoT/組み込みシステム保護のパイオニア
@@ -749,7 +807,7 @@
         コネクテッドカーのサイバー防御、スマートメーター保護、工場の制御機器セキュリティ。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: MediaTek (パートナー)、Supermicro (パートナー)、15億台以上のデバイスを保護
+        導入企業: <a href="https://www.mediatek.com" class="url-link">MediaTek</a> (パートナー)、<a href="https://www.supermicro.com" class="url-link">Supermicro</a> (パートナー)、15億台以上のデバイスを保護
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -762,8 +820,11 @@
     <!-- H -->
     <div class="company-card priority-high" id="harness">
       <div class="company-header">
-        <span class="company-name">Harness</span>
-        <span class="founding-year">(2017年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Harness</span>
+          <span class="founding-year">(2017年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Jyoti Bansal (Founder) | AppDynamics創業者($3.7B買収)、DevOps界の先駆者
@@ -783,7 +844,7 @@
         大規模システムのデプロイ自動化、クラウドコストの最適化、セキュリティ統合、API攻撃の検知・防御(Traceable)。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: <a href="https://www.harness.io/customers/cvs-health" class="url-link">CVS Health</a>、Wells Fargo、<a href="https://www.harness.io/customers/priceline" class="url-link">Priceline</a>
+        導入企業: <a href="https://www.cvshealth.com" class="url-link">CVS Health</a>、<a href="https://www.wellsfargo.com" class="url-link">Wells Fargo</a>、<a href="https://www.priceline.com" class="url-link">Priceline</a>
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -796,8 +857,11 @@
     <!-- I -->
     <div class="company-card priority-high" id="island">
       <div class="company-header">
-        <span class="company-name">Island</span>
-        <span class="founding-year">(2020年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Island</span>
+          <span class="founding-year">(2020年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Mike Fey (Co-Founder) | 元Symantec/BlueCoat CEO、エンタープライズセキュリティのベテラン
@@ -815,7 +879,7 @@
         コールセンターの在宅化、BYOD端末での安全な業務アクセス、機密データの保護。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: 米国トップ10銀行のうち8行、Pfizer、Swiss Life (450社以上が導入済み)
+        導入企業: 米国トップ10銀行のうち8行、<a href="https://www.pfizer.com" class="url-link">Pfizer</a>、<a href="https://www.swisslife.com" class="url-link">Swiss Life</a> (450社以上が導入済み)
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -828,8 +892,11 @@
     <!-- M -->
     <div class="company-card priority-high" id="modular">
       <div class="company-header">
-        <span class="company-name">Modular</span>
-        <span class="founding-year">(2022年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Modular</span>
+          <span class="founding-year">(2022年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Chris Lattner (Co-Founder) | LLVM/Clang/Swift/MLIR開発者、元Apple/Tesla/Google、コンパイラ界のレジェンド
@@ -849,7 +916,7 @@
         エッジデバイスでのAI推論高速化、大規模LLMサービスの運用コスト削減。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        パートナー: NVIDIA、AMD、Microsoft
+        パートナー: <a href="https://www.nvidia.com" class="url-link">NVIDIA</a>、<a href="https://www.amd.com" class="url-link">AMD</a>、<a href="https://www.microsoft.com" class="url-link">Microsoft</a>
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -862,8 +929,11 @@
     <!-- N -->
     <div class="company-card priority-high" id="netradyne">
       <div class="company-header">
-        <span class="company-name">Netradyne</span>
-        <span class="founding-year">(2015年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Netradyne</span>
+          <span class="founding-year">(2015年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Sandeep Pandya (Co-Founder) | Qualcomm出身、コンピュータビジョン専門家、フリート安全AI分野のパイオニア
@@ -883,7 +953,7 @@
         配送トラックの安全管理、危険運転の即時是正、優良ドライバーの表彰制度。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: <a href="https://www.netradyne.com/resources/case-studies/amazon-netradyne-case-study" class="url-link">Amazon</a>、Shell、Knight-Swift Transportation (3,000社以上、45万台以上の車両)
+        導入企業: <a href="https://www.amazon.com" class="url-link">Amazon</a>、<a href="https://www.shell.com" class="url-link">Shell</a>、<a href="https://www.knight-swift.com" class="url-link">Knight-Swift Transportation</a> (3,000社以上、45万台以上の車両)
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -896,8 +966,11 @@
     <!-- P -->
     <div class="company-card priority-med" id="parallel">
       <div class="company-header">
-        <span class="company-name">Parallel</span>
-        <span class="founding-year">(2019年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Parallel</span>
+          <span class="founding-year">(2019年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Ev Williams (Founder) | 元Twitter CEO、Blogger/Medium創業者、シリアルアントレプレナー
@@ -917,7 +990,7 @@
         特定トピックの深掘り調査、信頼できる情報ソースに基づいたレポート生成。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        パートナー: AWS、Vercel、Zapier (元Twitter CEO Jack Dorsey創業)
+        パートナー: <a href="https://aws.amazon.com" class="url-link">AWS</a>、<a href="https://vercel.com" class="url-link">Vercel</a>、<a href="https://zapier.com" class="url-link">Zapier</a> (元Twitter CEO Jack Dorsey創業)
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -929,8 +1002,11 @@
 
     <div class="company-card priority-med" id="roboflow">
       <div class="company-header">
-        <span class="company-name">Roboflow</span>
-        <span class="founding-year">(2019年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Roboflow</span>
+          <span class="founding-year">(2019年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Joseph Nelson (Co-Founder) | コンピュータビジョンの民主化を推進、100万人以上の開発者コミュニティ構築
@@ -949,7 +1025,7 @@
         <span class="section-label">ユースケース:</span> 工場の外観検査自動化、店舗の商品棚管理、安全監視システム。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        海外導入企業: Fortune 500製造企業、100万人以上のエンジニアが利用 (パートナー: NVIDIA、Intel、AWS)<br>
+        海外導入企業: Fortune 500製造企業、100万人以上のエンジニアが利用 (パートナー: <a href="https://www.nvidia.com" class="url-link">NVIDIA</a>、<a href="https://www.intel.com" class="url-link">Intel</a>、<a href="https://aws.amazon.com" class="url-link">AWS</a>)<br>
         日本パートナー: <a href="https://www.systems.nakashima.co.jp/rf/roboflow/" class="url-link">株式会社システムズナカシマ</a> (オフィシャルパートナー)<br>
         日本導入事例: <a href="https://www.systems.nakashima.co.jp/rf/roboflow/case/01/index.html" class="url-link">川本鋼材株式会社</a> - 鋼材出荷本数の自動カウントシステム導入により誤出荷削減
       </div>
@@ -964,8 +1040,11 @@
     <!-- S -->
     <div class="company-card priority-med" id="smack">
       <div class="company-header">
-        <span class="company-name">SMACK Technology</span>
-        <span class="founding-year">(2024年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">SMACK Technology</span>
+          <span class="founding-year">(2024年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> 情報非公開 | 米国防総省(DoD)向けAI開発、Palantir/Scale AIとパートナーシップ
@@ -982,7 +1061,7 @@
         防衛装備品の運用シミュレーション、危機対応計画の最適化、サプライチェーンリスク管理。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: 米国防総省(DoD)、Marine Corps Warfighting Lab (パートナー: Palantir、Scale AI)
+        導入企業: 米国防総省(DoD)、Marine Corps Warfighting Lab (パートナー: <a href="https://www.palantir.com" class="url-link">Palantir</a>、<a href="https://scale.com" class="url-link">Scale AI</a>)
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -995,8 +1074,11 @@
     <!-- T -->
     <div class="company-card priority-high" id="tinyfish">
       <div class="company-header">
-        <span class="company-name">TinyFish</span>
-        <span class="founding-year">(2023年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">TinyFish</span>
+          <span class="founding-year">(2023年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Sudheesh Nair (Co-Founder) | 元ThoughtSpot CEO、元Nutanix President、エンタープライズソフトウェア界のベテラン
@@ -1016,7 +1098,7 @@
         競合他社の価格自動監視、在庫チェック、フォーム入力代行、予約管理。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        導入企業: <a href="https://blog.google/products/travel/google-hotels-tinyfish-partnership/" class="url-link">Google (Google Hotels)</a>、<a href="https://www.doordash.com" class="url-link">DoorDash</a>、ClassPass (パートナー: Google)
+        導入企業: <a href="https://www.google.com/travel/hotels" class="url-link">Google Hotels</a>、<a href="https://www.doordash.com" class="url-link">DoorDash</a>、<a href="https://classpass.com" class="url-link">ClassPass</a>
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -1028,8 +1110,11 @@
 
     <div class="company-card priority-high" id="trobotics">
       <div class="company-header">
-        <span class="company-name">T-Robotics</span>
-        <span class="founding-year">(2024年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">T-Robotics</span>
+          <span class="founding-year">(2024年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Tal Wiesner (Co-Founder) | ABB AI Startup Challenge受賞、産業ロボットプログラミング革命を牽引
@@ -1049,7 +1134,7 @@
         多品種少量生産ラインの自動化、溶接・組立・検査工程の迅速な立ち上げ。
       </div>
       <div class="content-row" style="margin-left: 20px; font-style: italic; color: #555;">
-        パートナー: <a href="https://new.abb.com/news/detail/105977/abb-selects-t-robotics-as-ai-startup-challenge-winner" class="url-link">ABB Robotics (AI Startup Challenge受賞)</a>、Fluidotronica
+        パートナー: <a href="https://new.abb.com/products/robotics" class="url-link">ABB Robotics</a> (AI Startup Challenge受賞)、<a href="https://www.fluidotronica.com" class="url-link">Fluidotronica</a>
       </div>
       <div class="meta-info">
         <div class="meta-row">
@@ -1062,8 +1147,11 @@
     <!-- V -->
     <div class="company-card priority-high" id="vercel">
       <div class="company-header">
-        <span class="company-name">Vercel</span>
-        <span class="founding-year">(2015年設立)</span>
+        <div class="company-header-left">
+          <span class="company-name">Vercel</span>
+          <span class="founding-year">(2015年設立)</span>
+        </div>
+        <a href="#index" class="back-to-index">↑ Index</a>
       </div>
       <div class="ceo-info" style="background-color: #f0f8ff; padding: 10px; margin-bottom: 10px; border-left: 3px solid #2980b9; font-size: 10pt;">
         <strong>CEO:</strong> Guillermo Rauch (Founder) | Next.js/Socket.io/Mongoose.js開発者、アルゼンチン出身の独学エンジニア
@@ -1094,5 +1182,5 @@
     </div>
   
 
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9cb0211d48acaf3c","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9cb047179ba4e37e","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body></html>

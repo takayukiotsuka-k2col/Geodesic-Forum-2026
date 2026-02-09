@@ -226,17 +226,176 @@
         font-style: italic;
       }
 
+      /* レスポンシブデザイン: スマートフォン対応 */
+      @media screen and (max-width: 768px) {
+        body {
+          padding: 16px 20px;
+          font-size: 14px;
+        }
+
+        h1 {
+          font-size: 20pt;
+        }
+
+        h1 span:first-child {
+          font-size: 22px !important;
+        }
+
+        h1 span:last-child {
+          font-size: 14pt !important;
+        }
+
+        h2 {
+          font-size: 14pt;
+        }
+
+        h3 {
+          font-size: 12pt;
+        }
+
+        .header-info {
+          font-size: 10pt;
+        }
+
+        .executive-summary {
+          padding: 15px;
+        }
+
+        .stats-box {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .stat-item {
+          border-bottom: 1px solid #eee;
+          padding-bottom: 10px;
+        }
+
+        .stat-item:last-child {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+
+        .stat-value {
+          font-size: 16pt;
+        }
+
+        .index-grid {
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .index-item {
+          padding: 0;
+        }
+
+        .index-link {
+          padding: 10px 12px;
+        }
+
+        .index-number {
+          font-size: 10pt;
+          min-width: 25px;
+        }
+
+        .index-company {
+          font-size: 10pt;
+        }
+
+        .index-category {
+          font-size: 9pt;
+        }
+
+        .company-card {
+          padding: 15px;
+          margin-bottom: 20px;
+        }
+
+        .company-header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 5px;
+        }
+
+        .company-name {
+          font-size: 14pt;
+        }
+
+        .founding-year {
+          font-size: 10pt;
+        }
+
+        .ceo-info {
+          font-size: 9pt !important;
+          padding: 8px !important;
+        }
+
+        .section-label {
+          font-size: 10pt;
+        }
+
+        .content-row {
+          font-size: 10pt;
+          margin-bottom: 10px;
+        }
+
+        .meta-info {
+          font-size: 9pt;
+          padding: 8px;
+        }
+
+        .meta-row {
+          flex-direction: column;
+          gap: 5px;
+        }
+      }
+
+      /* タブレット対応 (768px - 1024px) */
+      @media screen and (min-width: 769px) and (max-width: 1024px) {
+        body {
+          padding: 24px 40px;
+        }
+
+        .index-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 大画面対応 (1025px以上) */
+      @media screen and (min-width: 1025px) {
+        body {
+          max-width: 1000px;
+        }
+
+        .index-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      /* 印刷対応 */
       @media print {
+        body {
+          padding: 20px;
+        }
+
         .index-section {
           page-break-after: always;
+        }
+
+        .company-card {
+          page-break-inside: avoid;
+        }
+
+        div[style*="background-color: #000"] {
+          display: none;
         }
       }
     </style>
   </head>
   <body style="font-size: 16px;">
     <!-- Vercel Deployment Notice -->
-    <div style="background-color: #000; color: #fff; text-align: center; padding: 8px 0; font-size: 11pt; margin-bottom: 20px;">
-      このファイルは Vercel上で動いています
+    <div style="background-color: #000; color: #fff; text-align: center; padding: 12px 0; font-size: 11pt; margin-bottom: 20px;">
+      <strong>このファイルは Vercel上で動いています</strong>
     </div>
     
     <h1>
@@ -893,4 +1052,5 @@
     </div>
   
 
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9cb012a5ec28af3c","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.9.1","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body></html>
